@@ -1,6 +1,6 @@
-FROM node:8.11.4
+FROM node:10.16.3
 
-LABEL maintainer="abner<contato@abner.io>"
+LABEL maintainer="adelmo"
 
 RUN apt-get update && apt-get install --no-install-recommends -y sudo python gcc g++ make \
     && npm config set cache /cache/.npm/  \
