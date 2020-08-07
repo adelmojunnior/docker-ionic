@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y sudo python gcc
     && sudo npm i -g ionic@4.5.0 --unsafe-perm \
     && apt-get -y remove python gcc g++ make \
     && rm -rf /var/lib/apt/lists/*
-
+RUN apt-get update && apt-get install --no-install-recommends -y wget
 RUN echo 'strict-ssl=false' > ~/.npmrc
 RUN git config --global url."https://".insteadOf git://
 
