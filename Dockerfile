@@ -20,6 +20,9 @@ RUN echo $TZ > /etc/timezone && \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
     dpkg-reconfigure -f noninteractive tzdata 
 
+RUN apt-get update &&  \
+    apt-get install -y wget
+
 RUN echo 'strict-ssl=false' > ~/.npmrc
 RUN git config --global url."https://".insteadOf git://
 
