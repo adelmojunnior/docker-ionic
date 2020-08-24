@@ -4,7 +4,7 @@ LABEL maintainer="adelmo<adelmo@contato.io>"
 
 ENV TZ=America/Bahia \
     IONIC_VERSION=4.5.0 \
-    CORDOVA_VERSION=9.0.0 \
+    CORDOVA_VERSION=10.0.0 \
     NODE_SASS=4.14.1
 
 RUN apt-get update &&  \
