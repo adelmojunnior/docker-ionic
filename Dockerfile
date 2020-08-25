@@ -5,12 +5,14 @@ LABEL maintainer="adelmo<adelmo@contato.io>"
 ENV TZ=America/Bahia \
     IONIC_VERSION=4.5.0 \
     CORDOVA_VERSION=10.0.0 \
-    NODE_SASS=4.14.1
+    NODE_SASS=4.14.1 \
+    NPM_VERSION=6.14.7
 
 RUN apt-get update &&  \
     apt-get install -y apt-utils bzip2 git wget curl unzip python gcc g++ make
 
-RUN npm i -g cordova@"$CORDOVA_VERSION" --unsafe-perm \
+RUN npm i -g npm@"$NPM_VERSION" --unsafe-perm \
+    npm i -g cordova@"$CORDOVA_VERSION" --unsafe-perm \
     npm i -g ionic@"$IONIC_VERSION" --unsafe-perm \
     npm i -g node-sass@"$NODE_SASS" --unsafe-perm \
     npm cache clear --force
